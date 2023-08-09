@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from fiberblu.models import CategoriaProduto
+from fiberblu.serializers import CategoriaProdutoSerializer
+
+class CategoriaProdutoViewSet(ModelViewSet):
+    queryset = CategoriaProduto.objects.all()
+    serializer_class = CategoriaProdutoSerializer
