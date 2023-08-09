@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 
-from fiberblu.models import CategoriaProduto, LinhaProduto, GrupoProduto
-from fiberblu.serializers import CategoriaProdutoSerializer, LinhaProdutoSerializer, GrupoProdutoSerializer
+from fiberblu.models import CategoriaProduto, LinhaProduto, GrupoProduto, Produto
+from fiberblu.serializers import CategoriaProdutoSerializer, LinhaProdutoSerializer, GrupoProdutoSerializer, ProdutoSerializer
 
 class CategoriaProdutoViewSet(ModelViewSet):
     queryset = CategoriaProduto.objects.all()
@@ -14,3 +14,7 @@ class LinhaProdutoViewSet(ModelViewSet):
 class GrupoProdutoViewSet(ModelViewSet):
     queryset = GrupoProduto.objects.all()
     serializer_class = GrupoProdutoSerializer
+
+class ProdutoSerializer(ModelViewSet):
+    queryset = Produto.objects.all()
+    serializer_class = ProdutoSerializer
