@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from fiberblu.models import CategoriaProduto, LinhaProduto, GrupoProduto, Produto, Representante, Empresa, CategoriaEmpresa
+from fiberblu.models import CategoriaProduto, LinhaProduto, GrupoProduto, Produto, Representante, Empresa, CategoriaEmpresa, Pedido
 
 class CategoriaProdutoSerializer(ModelSerializer):
     class Meta:
@@ -35,4 +35,9 @@ class EmpresaSerializer(ModelSerializer):
 class CategoriaEmpresaSerializer(ModelSerializer):
     class Meta:
         model = CategoriaEmpresa
+        fields = "__all__"
+
+class PedidoSerializer(ModelSerializer):
+    class Meta:
+        model = Pedido
         fields = "__all__"
