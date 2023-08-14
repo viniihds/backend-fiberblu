@@ -71,9 +71,7 @@ class Representante (models.Model):
         return self.nome
 
 class Pedido (models.Model):
-    produtos = models.ForeignKey(
-        Produto, on_delete=models.PROTECT, related_name="pedidos"
-    )
+    produtos = models.ManyToManyField(Produto, related_name="pedidos")
     representante = models.ForeignKey(
         Representante, on_delete=models.PROTECT, related_name="pedidos"
     )
