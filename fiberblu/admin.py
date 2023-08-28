@@ -10,5 +10,10 @@ admin.site.register(CategoriaEmpresa)
 admin.site.register(Empresa)
 admin.site.register(Representante)
 admin.site.register(Pedido)
-admin.site.register(Compra)
 admin.site.register(ItensCompra)
+class ItensCompraInline(admin.TabularInline):
+    model = ItensCompra
+
+@admin.register(Compra)
+class CompraAdmin(admin.ModelAdmin):
+    inlines = [ItensCompraInline]
