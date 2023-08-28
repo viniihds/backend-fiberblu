@@ -6,7 +6,7 @@ from .grupoProduto import GrupoProduto
 
 class Produto (models.Model):
     cor = models.CharField(max_length=100)
-    volume = models.IntegerField(max_length=5)
+    volume = models.IntegerField(null=False)
     codigo = models.IntegerField(null = False)
     preco = models.DecimalField(max_digits=8, null = False, decimal_places = 2)
     categoria = models.ForeignKey(
