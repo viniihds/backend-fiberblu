@@ -6,3 +6,4 @@ from .linhaProduto import LinhaProduto
 from .pedido import Pedido
 from .produto import Produto
 from .representante import Representante
+from .compra import Compra
