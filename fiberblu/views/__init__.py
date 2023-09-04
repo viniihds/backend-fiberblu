@@ -6,3 +6,4 @@ from .linhaProduto import LinhaProdutoViewSet
 from .pedido import PedidoViewSet
 from .produto import ProdutoViewSet
 from .representante import RepresentanteViewSet
+from .compra import CompraViewSet

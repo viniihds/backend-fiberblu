@@ -6,3 +6,4 @@ from .grupoProduto import GrupoProdutoSerializer
 from .linhaProduto import LinhaProdutoSerializer
 from .produto import ProdutoSerializer
 from .representante import RepresentanteSerializer
+from .compra import CompraSerializer
