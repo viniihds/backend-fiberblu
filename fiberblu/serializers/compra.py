@@ -8,6 +8,7 @@ class ItensCompraSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
         fields = "__all__"
+        depth = 1
 
 class CompraSerializer(ModelSerializer):
     status = CharField(source="get_status_display", read_only=True)
