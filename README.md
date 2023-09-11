@@ -4,7 +4,7 @@ Desenvolvimento do Projeto Integrador do Curso de Técnico em Desenvolvimento de
 
 Alunos: [Larissa Cristina Bileski](github.com/larissabileski) e [Vinicius Henrique da Silva](github.com/viniihds). 
 
-Professores: [Marco André Mendes](github.com/marcoandre).
+Professor: [Marco André Mendes](github.com/marcoandre).
 
 Links do projeto:
 
