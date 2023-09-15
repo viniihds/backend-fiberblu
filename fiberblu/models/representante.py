@@ -1,6 +1,7 @@
 from django.db import models
 
-class Representante (models.Model):
+
+class Representante(models.Model):
     nome = models.CharField(max_length=100)
     cnpj = models.CharField(max_length=18)
     email = models.CharField(max_length=100)

@@ -1,5 +1,7 @@
 from rest_framework.serializers import ModelSerializer
+
 from fiberblu.models.categoriaProduto import CategoriaProduto
+
 
 class CategoriaProdutoSerializer(ModelSerializer):
     class Meta:

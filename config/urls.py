@@ -2,9 +2,19 @@ from django.contrib import admin
 from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
-from usuario.router import router as usuario_router
 
-from fiberblu.views import CategoriaProdutoViewSet, LinhaProdutoViewSet, GrupoProdutoViewSet, ProdutoViewSet, RepresentanteViewSet, EmpresaViewSet, CategoriaEmpresaViewSet, PedidoViewSet, CompraViewSet
+from fiberblu.views import (
+    CategoriaEmpresaViewSet,
+    CategoriaProdutoViewSet,
+    CompraViewSet,
+    EmpresaViewSet,
+    GrupoProdutoViewSet,
+    LinhaProdutoViewSet,
+    PedidoViewSet,
+    ProdutoViewSet,
+    RepresentanteViewSet,
+)
+from usuario.router import router as usuario_router
 
 router = DefaultRouter()
 router.register(r"categoriaproduto", CategoriaProdutoViewSet)
