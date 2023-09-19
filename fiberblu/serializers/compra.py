@@ -2,6 +2,7 @@ from rest_framework.serializers import CharField, ModelSerializer
 
 from fiberblu.models import Compra, ItensCompra
 
+
 class ItensCompraSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
