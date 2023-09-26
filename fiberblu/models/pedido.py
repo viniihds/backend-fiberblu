@@ -11,6 +11,7 @@ class Pedido(models.Model):
     representante = models.ForeignKey(Representante, on_delete=models.PROTECT, related_name="pedidos")
     valor = models.DecimalField(max_digits=10, null=False, decimal_places=2)
     data = models.DateField(max_length=10)
+    dataPagamento = models.DateField(max_length=10)
     empresa = models.ForeignKey(Empresa, on_delete=models.PROTECT, related_name="pedidos")
     pagamento = models.ForeignKey(Pagamento, on_delete=models.PROTECT, related_name="pagamentos")
 
