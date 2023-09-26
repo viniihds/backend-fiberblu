@@ -13,6 +13,7 @@ from fiberblu.views import (
     PedidoViewSet,
     ProdutoViewSet,
     RepresentanteViewSet,
+    PagamentoViewSet,
 )
 from usuario.router import router as usuario_router
 
@@ -26,6 +27,7 @@ router.register(r"empresa", EmpresaViewSet)
 router.register(r"categoriaempresa", CategoriaEmpresaViewSet)
 router.register(r"pedido", PedidoViewSet)
 router.register(r"compra", CompraViewSet)
+router.register(r"pagamento", PagamentoViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

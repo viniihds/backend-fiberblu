@@ -7,3 +7,4 @@ from .pedido import Pedido
 from .produto import Produto
 from .representante import Representante
 from .compra import Compra, ItensCompra
+from .pagamento import Pagamento
