@@ -9,6 +9,7 @@ class PedidoSerializer(ModelSerializer):
     produtos = ProdutoSerializer(many=True)
     representante = CharField(source="representante.nome")
     empresa = CharField(source="empresa.nome")
+    pagamento = CharField(source="pagamento.descricao")
 
     class Meta:
         model = Pedido
