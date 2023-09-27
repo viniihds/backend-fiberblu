@@ -4,9 +4,7 @@ from usuario.models import Usuario
 
 from .empresa import Empresa
 from .produto import Produto
-from .representante import Representante
 from .pagamento import Pagamento
-
 
 class Pedido(models.Model):
     class StatusPedido(models.IntegerChoices):
@@ -26,3 +24,8 @@ class Pedido(models.Model):
 
     def __str__(self):
         return f"Pedido {self.empresa}"
+
+class ItensPedido(models.Model):
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name="itens")
+    produto = models.ForeignKey(Produto, on_delete=models.PROTECT, related_name="+")
+    quantidade = models.IntegerField(default=1)
