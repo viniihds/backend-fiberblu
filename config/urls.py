@@ -6,7 +6,6 @@ from rest_framework.routers import DefaultRouter
 from fiberblu.views import (
     CategoriaEmpresaViewSet,
     CategoriaProdutoViewSet,
-    CompraViewSet,
     EmpresaViewSet,
     GrupoProdutoViewSet,
     LinhaProdutoViewSet,
@@ -26,7 +25,6 @@ router.register(r"representante", RepresentanteViewSet)
 router.register(r"empresa", EmpresaViewSet)
 router.register(r"categoriaempresa", CategoriaEmpresaViewSet)
 router.register(r"pedido", PedidoViewSet)
-router.register(r"compra", CompraViewSet)
 router.register(r"pagamento", PagamentoViewSet)
 
 urlpatterns = [
