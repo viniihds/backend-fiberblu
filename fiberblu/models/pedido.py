@@ -15,7 +15,6 @@ class Pedido(models.Model):
 
     usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name="compras")
     status = models.IntegerField(choices=StatusPedido.choices,  default=StatusPedido.CARRINHO)
-    produtos = models.ManyToManyField(Produto, related_name="pedidos")
     valor = models.DecimalField(max_digits=10, null=False, decimal_places=2)
     data = models.DateField(max_length=10)
     dataPagamento = models.DateField(max_length=10)

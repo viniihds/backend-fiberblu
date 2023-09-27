@@ -1,17 +1,21 @@
 from rest_framework.serializers import CharField, ModelSerializer
 
-from fiberblu.models.pedido import Pedido
+from fiberblu.models.pedido import Pedido, ItensPedido
+from fiberblu.serializers.pedido import Pedido, ItensPedido
 
-from .produto import ProdutoSerializer
-
+class ItensPedidoSerializer(ModelSerializer):
+    produto = CharField(source="produto.linha")
+    class Meta:
+        model = ItensPedido
+        fields = ["produto", "quantidade"]
 
 class PedidoSerializer(ModelSerializer):
-    produtos = ProdutoSerializer(many=True)
-    usuario = CharField(source="usuario.email")
+    itens = ItensPedidoSerializer(many=True, read_only=True)
     empresa = CharField(source="empresa.nome")
-    status = CharField(source="get_status_display")
     pagamento = CharField(source="pagamento.descricao")
-
+    status = CharField(source="get_status_display", read_only=True)
+    usuario = CharField(source="usuario.email", read_only=True)
+    
     class Meta:
         model = Pedido
         fields = "__all__"
