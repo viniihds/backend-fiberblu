@@ -18,4 +18,4 @@ class PedidoSerializer(ModelSerializer):
     
     class Meta:
         model = Pedido
-        fields = "__all__"
+        fields = ("id", "usuario", "status", "total", "pagamento", "empresa", "itens")

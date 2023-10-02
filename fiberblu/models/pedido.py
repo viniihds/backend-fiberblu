@@ -23,6 +23,13 @@ class Pedido(models.Model):
 
     def __str__(self):
         return f"Pedido {self.empresa}"
+    @property
+    def total(self):
+        # total = 0
+        # for item in self.itens.all():
+        #     total += item.livro.preco * item.quantidade
+        # return total
+        return sum(item.produto.preco * item.quantidade for item in self.itens.all())
 
 class ItensPedido(models.Model):
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name="itens")
