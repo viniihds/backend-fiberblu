@@ -6,7 +6,7 @@ authors = [
     {name = "viniihds", email = "viniciushsilva2210@gmail.com"},
 ]
 dependencies = [
-    "django>=4.2.4",
+    "django>=4.2.6",
     "djangorestframework>=3.14.0",
     "django-extensions>=3.2.3",
     "pydotplus>=2.0.2",
@@ -30,3 +30,7 @@ line-length = 120
 [tool.pdm.scripts]
 pre_dev = "python ./scripts/set_my_ip.py"
 dev = "python manage.py runserver 0.0.0.0:19003"
+
+[[tool.pdm.autoexport]]
+filename = "requirements.txt"
+without-hashes = "true"
