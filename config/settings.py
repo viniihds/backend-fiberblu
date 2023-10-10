@@ -13,13 +13,6 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:3000", "http://localhost:8000", "https
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-70n65n^4bt(gblq-b&#)gf8wx*r@2ge8mh^x*qqsoa1_*nui65"
-
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
-
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
