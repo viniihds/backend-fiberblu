@@ -14,10 +14,12 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "netifaces>=0.11.0",
     "gunicorn>=21.2.0",
-    "whitenoise[brotli]>=6.5.0",
+    "whitenoise[brotli]>=6.6.0",
     "psycopg2-binary>=2.9.9",
     "django-cloudinary-storage>=0.3.0",
     "django-cors-headers>=4.3.1",
+    "drf-spectacular>=0.26.5",
+    "rest-framework-simplejwt>=0.0.2",
 ]
 requires-python = ">=3.10"
 readme = "README.md"

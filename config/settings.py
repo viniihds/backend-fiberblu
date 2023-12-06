@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django_extensions",
     "corsheaders",
     "rest_framework",
+    "drf_spectacular",
     "fiberblu",
     "usuario",
 ]
@@ -40,6 +41,16 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Fiberblu API",
+    "DESCRIPTION": "API para gerenciamento de vendas da empresa Fiberblu, incluindo endpoints e documentação.",
+    "VERSION": "1.0.0",
+}
 
 ROOT_URLCONF = "config.urls"
 
