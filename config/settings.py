@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "cloudinary_storage",
     "cloudinary",
     "django_extensions",
+    "corsheaders",
     "rest_framework",
     "fiberblu",
     "usuario",
@@ -32,6 +33,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -114,9 +116,7 @@ if MODE in ["PRODUCTION", "MIGRATE"]:
             "ENGINE": "django.db.backends.postgresql",
             "NAME": os.getenv("DATABASE_NAME"),
             "USER": os.getenv("DATABASE_USER"),
-            "PASSWORD": os.getenv("DATABASE_PASSWORD"),
-            "HOST": os.getenv("DATABASE_HOST"),
-            "PORT": os.getenv("DATABASE_PORT"),
+            "PASSWORD": os.getenv("DATCORS_ALLOW_ALL_ORIGINS = TrueSE_PORT"),
         }
     }
 else:
@@ -128,3 +128,5 @@ else:
     }
 
 print(MODE, DATABASES)
+
+CORS_ALLOW_ALL_ORIGINS = True
