@@ -22,15 +22,15 @@ from drf_spectacular.views import (
 )
  
 router = DefaultRouter()
-router.register(r"categoriaproduto", CategoriaProdutoViewSet)
-router.register(r"linhaproduto", LinhaProdutoViewSet)
-router.register(r"grupoproduto", GrupoProdutoViewSet)
-router.register(r"produto", ProdutoViewSet)
-router.register(r"representante", RepresentanteViewSet)
-router.register(r"empresa", EmpresaViewSet)
-router.register(r"categoriaempresa", CategoriaEmpresaViewSet)
-router.register(r"pedido", PedidoViewSet)
-router.register(r"pagamento", PagamentoViewSet)
+router.register(r"categoriaprodutos", CategoriaProdutoViewSet)
+router.register(r"linhaprodutos", LinhaProdutoViewSet)
+router.register(r"grupoprodutos", GrupoProdutoViewSet)
+router.register(r"produtos", ProdutoViewSet)
+router.register(r"representantes", RepresentanteViewSet)
+router.register(r"empresas", EmpresaViewSet)
+router.register(r"categoriaempresas", CategoriaEmpresaViewSet)
+router.register(r"pedidos", PedidoViewSet)
+router.register(r"pagamentos", PagamentoViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
