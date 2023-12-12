@@ -14,7 +14,7 @@ class ProdutoSerializer(ModelSerializer):
         model = Produto
         fields = ("id", "cor","volume","preco","categoria","linha","grupo")
 
-class ProdutooDetailSerializer(ModelSerializer):
+class ProdutoDetailSerializer(ModelSerializer):
 
     class Meta:
         model = Produto
