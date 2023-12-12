@@ -12,13 +12,13 @@ class ProdutoSerializer(ModelSerializer):
 
     class Meta:
         model = Produto
-        fields = "__all__"
+        fields = ("id", "cor","volume","preco","categoria","linha","grupo")
 
 class ProdutooDetailSerializer(ModelSerializer):
 
     class Meta:
         model = Produto
-        fields = "__all__"
+        fields = ("id", "cor","volume","preco","categoria","linha","grupo")
         depth = 2
 
 class ProdutoListSerializer(ModelSerializer):
@@ -31,5 +31,5 @@ class ProdutoListSerializer(ModelSerializer):
 
     class Meta:
         model = Produto
-        fields = "__all__"
+        fields = ("id", "cor","volume","preco","categoria","linha","grupo")
         depth = 2
