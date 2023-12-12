@@ -19,7 +19,7 @@ class ProdutooDetailSerializer(ModelSerializer):
     class Meta:
         model = Produto
         fields = "__all__"
-        depth = 1
+        depth = 2
 
 class ProdutoListSerializer(ModelSerializer):
     categoria = models.ForeignKey(CategoriaProduto, on_delete=models.PROTECT, related_name="produtos")
